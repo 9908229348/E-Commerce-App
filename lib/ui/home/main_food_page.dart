@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/ui/home/food_page_body.dart';
 import 'package:e_commerce_app/utils/colors.dart';
 import 'package:e_commerce_app/utils/widgets/big_text.dart';
 import 'package:e_commerce_app/utils/widgets/small_text.dart';
@@ -29,9 +30,14 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         text: 'India',
                         color: AppColors.mainColor,
                       ),
-                      SmallText(
-                        text: 'City',
-                        color: AppColors.textColor,
+                      Row(
+                        children: [
+                          SmallText(
+                            text: 'City',
+                            color: Colors.black54,
+                          ),
+                          const Icon(Icons.arrow_drop_down_rounded)
+                        ],
                       )
                     ],
                   ),
@@ -50,6 +56,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   )
                 ]),
           )),
+        FoodPageBody()
         ],
       ),
     );
